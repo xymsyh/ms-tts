@@ -1,3 +1,43 @@
-测试命令如下：
+# ms-tts
 
-D:\R2025\AHK\ms-tts\main.py "你好，我是晓晓"
+本项目基于 [edge_tts](https://github.com/rany2/edge-tts) 实现微软语音合成（TTS），支持命令行朗读文本并保存为音频文件。
+
+## 环境依赖
+
+- Python 3.7+
+- edge_tts
+- nest_asyncio
+- playsound
+
+安装依赖：
+
+```bash
+pip install edge_tts nest_asyncio playsound
+```
+
+## 使用方法
+
+命令行运行：
+
+```bash
+python main.py "你好，我是晓晓"
+```
+
+可选参数：
+
+- `--voice` 指定语音类型（默认为 `zh-CN-XiaoxiaoNeural`）
+
+示例：
+
+```bash
+python main.py "欢迎使用微软语音合成" --voice zh-CN-YunxiNeural
+```
+
+## 输出说明
+
+- 音频文件默认保存到 `audio-save-file` 文件夹下，文件名为 `edge-tts-output.mp3`
+- 朗读完成后自动播放音频
+
+## 注意事项
+
+- `audio-save-file` 文件夹已添加到 `.gitignore`，不会被提交到 Git 仓库。
