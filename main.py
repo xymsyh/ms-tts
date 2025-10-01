@@ -8,7 +8,7 @@ from playsound import playsound  # 用于播放音频
 nest_asyncio.apply()  # 修复事件循环已关闭的问题
 
 # 默认保存路径
-DEFAULT_SAVE_FOLDER = r"D:\Code\langDuBaoCun"
+DEFAULT_SAVE_FOLDER = r"D:\R2025\AHK\ms-tts\音频保存文件"
 
 async def run_tts(text, output_path, voice='zh-CN-XiaoxiaoNeural'):
     communicate = edge_tts.Communicate(text, voice)
